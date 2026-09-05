@@ -15,7 +15,7 @@
     <title>HTML - HiperTexto (BASE)</title>
     </head>
     <body>
-        <h1 align="center">
+        <h1 id="inicio" align="center">
             <font color="#800000">HTML - HiperTexto para Navegadores (BASE)</font>
         </h1>
         <hr />
@@ -35,7 +35,8 @@
             <li><a href="#links">Links e Referências. Como Funcionam?</a></li>
         </font></ul>
         <hr />
-        <h2>História dos Computadores</h2>
+        <h2 id="historia">História dos Computadores</h2>
+        <small><a href="#inicio">(Voltar)</a></small>
         <p>É interessante quando olhamos para a estrutura de um computador hoje e reparamos o quão pequenos estão se tornando. Mas no começo... Você ficaria assustado com seu tamanho!</p>
         <p>Vamos começar observando o que é considerado o primeiro equipamento que nos auxiliou com cálculos matemáticos.</p>
         <p>O <u>Harvard Mark I</u>, criado em 1944 por <i>Howard Aiken</i>, foi o <strong>Primeiro Computador Eletromecânico Automático de Grande Escala</strong>, ele percebeu que precisava de uma máquina automatizada para resolver equações matemáticas complexas de física e engenharia, como Harvard não tinha recursos para construir o projeto, <i>Aiken</i> apresentou a ideia à IBM que decidiu financiar o projeto e construir a máquina nos seus laboratórios em Nova York e o entregou a Harvard em 1944.</p>
@@ -76,11 +77,47 @@
         <p>O <u>Colossus</u> reduziu o tempo da Segunda Guerra Mundial em muitos meses e salvou milhares de vidas. Porém, assim que a guerra acabou em 1945, o primeiro-ministro <i>Winston Churchill</i> ordenou que todas as 10 máquinas <u>Colossus</u> existentes fossem completamente destruídas e seus projetos queimados.</p>
         <p>O motivo? O governo britânico queria manter a tecnologia em segredo absoluto, pois temia a <strong>Guerra Fria</strong> que estava começando. A existência do <u>Colossus</u> só foi revelada ao mundo na década de 1970. É por isso que, por quase 30 anos, os livros de história deram todo o crédito do pioneirismo digital ao <u>ENIAC</u> americano de 1946.</p>
         <p>A grande diferença entre o <u>Colossus</u> e o <u>ENIAC</u> (1946) resume-se a uma palavra-chave da computação: propósito. Embora ambos usassem válvulas eletrônicas e fossem incrivelmente rápidos para a época, eles foram projetados com filosofias completamente diferentes.</p>
-        <p>Comparativo Básico entre os dois</p>
+        <p>Comparativo Básico entre os dois:</p>
         <ul>
             <li><strong>Colossus:</strong> Computador de Propósito Especial, Decifrar a criptografia de Lorenz (Nazista), Fazia apenas contagens e comparações lógicas (Booleana), Cerca de 1.500 a 2.400 válvulas.</li>
             <li><strong>ENIAC:</strong> Primeiro Computador de Uso Geral, Calcular tabelas de balística (trajetória de artilharia) e fusão nuclear, Podia resolver qualquer cálculo matemático imaginável, Um monstro com mais de 17.400 válvulas.</li>
         </ul>
 
+        <h2 id="clients">O que são CLIENTS?</h2>
+        <small><a href="#inicio">(Voltar)</a></small>
+        <p>O termo <i>"client"</i> (ou cliente) refere-se ao software que solicita, recebe e renderiza a sua página HTML para que um ser humano possa interagir com ela. Na quase totalidade dos casos, o cliente é o seu <strong>navegador web</strong> (como Google Chrome, Safari, Mozilla Firefox ou Microsoft Edge).</p>
+        <p>Para entender isso de forma didática, pense na web como um restaurante:</p>
+        <ul>
+            <li><strong>O Servidor (Server):</strong> É a cozinha. Ele guarda as receitas e os ingredientes (os arquivos .html, imagens e estilos).</li>
+            <li><strong>O Cliente (Client):</strong> É o cliente da mesa (ou o garçom que leva o pedido). Ele pede o "prato" (a página web) e é quem efetivamente consome e exibe o resultado final.</li>
+        </ul>
+        <p>Quando você escreve um arquivo <i>index.html</i>, ele é apenas um arquivo de texto com várias tags (h1, p, a). Esse arquivo sozinho não faz nada. É aí que entra o cliente.</p>
+        <p><strong>O cliente tem três funções principais:</strong></p>
+        <ul>
+            <li><strong>Fazer a Requisição (Request):</strong> Quando você digita um endereço (URL) no navegador e aperta Enter, o cliente envia uma mensagem para o servidor dizendo: "Por favor, me mande o arquivo HTML dessa página".</li>
+            <li><strong>Interpretar o Código (Parsing):</strong> O servidor envia o texto em HTML puro de volta. O cliente lê esse código linha por linha. Ele entende que "h1" significa um título principal, que "img" puxa uma foto e que "a" é um link.</li>
+            <li><strong>Renderizar (Rendering):</strong> O cliente transforma aquele monte de texto com tags na interface visual e bonita que você vê na tela.</li>
+        </ul>
+        <p><strong>O Cliente não é apenas o navegador Padrão!</strong></p>
+        <p>Embora o Chrome ou o Safari sejam os exemplos mais comuns, no mundo do HTML puro, qualquer programa que lê o seu código HTML é um cliente. Isso inclui:</p>
+        <ul>
+            <li><strong>Leitores de tela:</strong> Softwares usados por pessoas com deficiência visual. Eles funcionam como "clientes" que leem o HTML e transformam as tags em áudio.</li>
+            <li><strong>Robôs de busca (como o Googlebot):</strong> O Google usa um "cliente" automatizado que acessa o seu HTML para entender o conteúdo da sua página e indexá-la no buscador.</li>
+        </ul>
+        <p><strong>Em resumo</strong></p>
+        <p>No HTML puro, o cliente é o lado que consome e exibe o código. Ele pega as instruções estruturais que você escreveu nas tags HTML e as transforma em uma experiência visual e interativa para o usuário final.</p>
+        
+
+        <h2 id="servers">O que são SERVERS?</h2>
+        <small><a href="#inicio">(Voltar)</a></small>
+
+        <h2 id="basica">Como é a Estrutura Básica de um HTML?</h2>
+        <small><a href="#inicio">(Voltar)</a></small>
+
+        <h2 id="listas">Diferença entre Listas Ordenadas e Não Ordenadas</h2>
+        <small><a href="#inicio">(Voltar)</a></small>
+
+        <h2 id="links">Links e Referências. Como Funcionam?</h2>
+        <small><a href="#inicio">(Voltar)</a></small>
     </body>
 </HTML>
