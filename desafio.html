@@ -16,7 +16,7 @@
     </head>
     <body>
         <h1 id="inicio" align="center">
-            <font color="#800000">HTML - HiperTexto para Navegadores (BASE)</font>
+            <font color="#800000">HTML - HiperTexto para Navegadores</font>
         </h1>
         <hr />
         <h2 align="center">
@@ -155,7 +155,7 @@
                 </ul>
         </ol>
         <p>Enfim, o desenvolvimento tecnológico está acelerado e podemos apostar que a medida que o tempo passa seremos capazes de pular a barreira de qualquer limite da área! <strong>Impressionante não?</strong></p>
-
+        <hr />
         <h2 id="clients">O que são CLIENTS?</h2>
         <small><a href="#inicio">(Voltar)</a></small>
         <p>O termo <i>"client"</i> (ou cliente) refere-se ao software que solicita, recebe e renderiza a sua página HTML para que um ser humano possa interagir com ela. Na quase totalidade dos casos, o cliente é o seu <strong>navegador web</strong> (como Google Chrome, Safari, Mozilla Firefox ou Microsoft Edge).</p>
@@ -179,8 +179,7 @@
         </ul>
         <p><strong>Em resumo</strong></p>
         <p>No HTML puro, o cliente é o lado que consome e exibe o código. Ele pega as instruções estruturais que você escreveu nas tags HTML e as transforma em uma experiência visual e interativa para o usuário final.</p>
-        
-
+        <hr />
         <h2 id="servers">O que são SERVERS?</h2>
         <small><a href="#inicio">(Voltar)</a></small>
         <p>No contexto da web, se o client (o seu navegador) é quem pede e lê a página, o server (servidor) é o computador onde o seu arquivo HTML fica guardado e que o entrega quando alguém pede.</p>
@@ -207,37 +206,97 @@
             <li>Ele vai entregar uma cópia para cada um dos <strong>10 clients (navegadores)</strong>.</li>
         </ol>
         <p>O servidor não sabe o que está escrito dentro do HTML e nem se importa; o único trabalho dele foi garantir que o arquivo chegasse inteiro e seguro até o navegador de quem pediu.</p>
-
-
-
+        <hr />
         <h2 id="basica">Como é a Estrutura Básica de um HTML?</h2>
         <small><a href="#inicio">(Voltar)</a></small>
         <p> A princípio, a estrutura básica de um HTML é muito simples. Ela tem um tipo, cabeçalho e corpo <strong>(Esse é onde está a codificação que o usuário vai ver na tela)</strong>:
         <pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="pt-BR"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Título da Página&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-BR"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Título da Página&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
 
-    &lt;h1&gt;Este é o título principal do site&lt;/h1&gt;
-    &lt;p&gt;Este é um parágrafo de texto.&lt;/p&gt;
+            &lt;h1&gt;Este é o título principal do site&lt;/h1&gt;
+            &lt;p&gt;Este é um parágrafo de texto.&lt;/p&gt;
 
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </code></pre>
+        <hr />
         <h2 id="listas">Diferença entre Listas Ordenadas e Não Ordenadas</h2>
         <small><a href="#inicio">(Voltar)</a></small>
-
+        <p><strong>Listas Não Ordenadas (Unordered Lists)</strong></p>
+        <p>São usadas quando a ordem dos itens não importa. Se você mudar as linhas de lugar, o sentido da lista continua exatamente o mesmo.</p>
+        <ul>
+            <li><strong>A Tag:</strong> Usa-se a tag &lt;ul&gt; (abreviação de Unordered List).</li>
+            <li><strong>O Visual:</strong> O client (navegador) exibe os itens com bolinhas (pontos pretos/marcadores) antes de cada texto.</li>
+            <li><strong>Exemplo clássico:</strong> Uma lista de compras de supermercado. Não importa se você comprar o arroz antes do feijão.</li>
+        </ul>
+        <p><strong>Listas Ordenadas (Ordered Lists)</strong></p>
+        <p>São usadas quando a ordem dos itens é essencial. Se você inverter os passos, o resultado final dá errado ou perde o sentido.</p>
+        <ul>
+            <li><strong>A Tag:</strong> Usa-se a tag &lt;ol&gt; (abreviação de Ordered List).</li>
+            <li><strong>O Visual:</strong> O navegador numera os itens automaticamente em ordem sequencial (1, 2, 3...). Você não precisa digitar os números!</li>
+            <li><strong>Exemplo clássico:</strong> O passo a passo de uma receita de bolo ou um ranking de posições.</li>
+        </ul>
+        <p><strong>O elemento em comum: A tag &lt;li&gt;</strong></p>
+        <p>Você deve ter reparado que tanto dentro da &lt;ul&gt; quanto da &lt;ol&gt;, nós usamos a tag &lt;li&gt; (abreviação de List Item, ou item da lista).</p>
+        <p>Pense nas tags &lt;ul&gt; e &lt;ol&gt; como as caixas organizadoras, e as tags &lt;li&gt; como os objetos que você coloca dentro delas. Uma &lt;li&gt; nunca deve ficar solta no código; ela precisa sempre estar dentro de uma mãe &lt;ul&gt; ou &lt;ol&gt;.</p>
+        <p><strong>Curiosidade:</strong></p>
+        <p>Para mudar o tipo de numeração de uma lista ordenada (&lt;ol&gt;) usando HTML puro, nós usamos o atributo type diretamente na tag de abertura.</p>
+        <p><strong>&lt;ol type="X"&gt; onde:</strong></p>
+        <ul>
+            <li>type="1" - Números Normais(padrão) (1, 2, 3,...)</li>
+            <li>type="a" - Letras Minúsculas (a, b, c,...)</li>
+            <li>type="A" - letras Maiúsculas (A, B, C,...)</li>
+            <li>type="i" - Algarismos Romanos Minúsculos (i, ii, iii,...)</li>
+            <li>type="I" - Algarismos Romanos Maiúsculos (I, II, III,...)</li>
+        </ul>
+        <hr />
         <h2 id="links">Links e Âncoragem. Como Funcionam?</h2>
         <small><a href="#inicio">(Voltar)</a></small>
-
+        <p>Os links e as âncoras são a verdadeira alma da internet (a palavra Web significa "teia" justamente por causa deles). Eles servem para conectar páginas diferentes ou para levar o usuário a pontos específicos dentro da mesma página.</p>
+        <p>No HTML puro, nós criamos ambos usando a tag <a> (abreviação de Anchor, ou âncora em inglês).</p>
+        <ol>
+            <li><strong>Links: Conectando Páginas Diferentes</strong></li>
+                <ul>
+                    <li>Um link tradicional pega o usuário e o leva para outro lugar (outro site ou outra página do seu próprio site).</li>
+                    <li>Para o link funcionar, a tag &lt;a&gt; precisa de um atributo obrigatório chamado href (abreviação de Hypertext Reference, ou Referência de Hipertexto). O href é o endereço de destino.</li>
+                    <li><strong>Exemplo simples:</strong> &lt;a href="https://google.com"&gt;Visitar o Google&lt;/a&gt;</li>
+                    <li>href="...": Define para onde o usuário vai ao clicar.</li>
+                    <li>O texto no meio: "Visitar o Google" é o texto clicável que aparece na tela (geralmente azul e sublinhado pelo navegador).</li>
+                    <li>Por padrão, o link abre na mesma aba, tirando o usuário do seu site. Se você quiser que o link abra em uma nova aba, adicione o atributo target="_blank":</li>
+                    <li><strong>Exemplo: </strong>&lt;a href="https://google.com" target="_blank"&gt;Visitar o Google em nova aba&lt;/a&gt;</li>
+                </ul>
+            <li><strong>Âncoras: Navegando Dentro da Mesma Página</strong></li>
+                <ul>
+                    <li>Sabe quando você entra em um site longo (como a Wikipédia) e tem um índice no topo que, ao clicar, a página "rola" sozinha direto para o capítulo escolhido? Isso é uma âncora.</li>
+                    <li>Para fazer isso funcionar, precisamos de um trabalho em equipe entre duas tags: o botão que clica e o destino onde a página vai parar.</li>
+                    <li><strong>Passo 1: Marcar o Destino (A Meta)</strong></li>
+                    <li>Você usa o atributo id (identificador único) em qualquer tag HTML lá embaixo na página para dar um "nome" àquele lugar.</li>
+                    <li><strong>Exemplo:</strong></li>
+                    <li>&lt;h2 id="capitulo3"&gt;Capítulo 3: Como Cuidar de Plantas&lt;/h2&gt;</li>
+                    <li>&lt;p&gt;Aqui começa o texto do capítulo 3...&lt;/p&gt;</li>
+                    <li><strong>Passo 2: Criar o Link que Aponta para o Destino</strong></li>
+                    <li>Lá no topo da página, você cria o link usando a tag &lt;a&gt;. No href, em vez de colocar um link da internet, você coloca o sinal de hashtag (#) seguido do nome do ID que você criou lá embaixo.</li>
+                    <li><strong>Exemplo:</strong></li>
+                    <li>&lt;a href="#capitulo3"&gt;Ir direto para o Capítulo 3&lt;/a&gt;</li>
+                    <li>Quando o usuário clicar em "Ir direto para o Capítulo 3", o client (navegador) vai caçar onde está a tag com o id="capitulo3" e vai rolar a tela até ela num piscar de olhos.</li>
+                </ul>
+        </ol>
+        <li><strong>Resumo Visual da Diferença</strong></li>
+        <ul>
+            <li><strong>Link Externo: </strong>href="https://site.com" ➔ Viaja para outra rua (outro site).</li>
+            <li><strong>Link Interno: </strong>href="contato.html" ➔ Entra em outro cômodo da mesma casa (outra página do seu site).</li>
+            <li><strong>Âncora: </strong>href="#topo" ➔ Aponta para um móvel específico dentro do mesmo quarto (um ponto na mesma página).</li>
+        </ul>
+        <hr />
         <h2 id="referencia">REFERÊNCIAS - Links Interessantes</h2>
         <small><a href="#inicio">(Voltar)</a></small>
+
     </body>
 </HTML>
