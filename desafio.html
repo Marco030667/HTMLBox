@@ -11,6 +11,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--Torna seu site responsivo - Se adapta a telas de celulares, tablets e computadores-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Alteração de fonte usando um pouco de CSS-->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
     <!--Título exibido no topo da página-->
     <title>HTML - HiperTexto (BASE)</title>
     </head>
@@ -18,10 +24,12 @@
         <h1 id="inicio" align="center">
             <font color="#800000">HTML - HiperTexto para Navegadores</font>
         </h1>
+
         <hr />
         <h2 align="center">
             <font color="purple">A Base da Estrutura de uma Página WEB</font>
         </h2>
+
         <hr />
         <h1><strong>
             <font color="#800000">Módulos</font>
@@ -33,8 +41,11 @@
             <li><a href="#basica">Como é a Estrutura Básica de um HTML?</a></li>
             <li><a href="#listas">Diferença entre listas Ordenadas e Não Ordenadas</a></li>
             <li><a href="#links">Links e Âncoragem. Como Funcionam?</a></li>
+            <li><a href="#tabelas">Como trabalhar com Tabelas em HTML</a></li>
+            <li><a href="#formularios">Trabalhando com Formulários em HTML</a></li>
             <li><a href="#referencia">Referências</a></li>
         </font></ul>
+
         <hr />
         <h2 id="historia">História dos Computadores</h2>
         <small><a href="#inicio">(Voltar)</a></small>
@@ -155,6 +166,7 @@
                 </ul>
         </ol>
         <p>Enfim, o desenvolvimento tecnológico está acelerado e podemos apostar que a medida que o tempo passa seremos capazes de pular a barreira de qualquer limite da área! <strong>Impressionante não?</strong></p>
+
         <hr />
         <h2 id="clients">O que são CLIENTS?</h2>
         <small><a href="#inicio">(Voltar)</a></small>
@@ -179,6 +191,7 @@
         </ul>
         <p><strong>Em resumo</strong></p>
         <p>No HTML puro, o cliente é o lado que consome e exibe o código. Ele pega as instruções estruturais que você escreveu nas tags HTML e as transforma em uma experiência visual e interativa para o usuário final.</p>
+
         <hr />
         <h2 id="servers">O que são SERVERS?</h2>
         <small><a href="#inicio">(Voltar)</a></small>
@@ -206,6 +219,7 @@
             <li>Ele vai entregar uma cópia para cada um dos <strong>10 clients (navegadores)</strong>.</li>
         </ol>
         <p>O servidor não sabe o que está escrito dentro do HTML e nem se importa; o único trabalho dele foi garantir que o arquivo chegasse inteiro e seguro até o navegador de quem pediu.</p>
+
         <hr />
         <h2 id="basica">Como é a Estrutura Básica de um HTML?</h2>
         <small><a href="#inicio">(Voltar)</a></small>
@@ -226,6 +240,7 @@
         &lt;/body&gt;
         &lt;/html&gt;
         </code></pre>
+
         <hr />
         <h2 id="listas">Diferença entre Listas Ordenadas e Não Ordenadas</h2>
         <small><a href="#inicio">(Voltar)</a></small>
@@ -256,6 +271,7 @@
             <li>type="i" - Algarismos Romanos Minúsculos (i, ii, iii,...)</li>
             <li>type="I" - Algarismos Romanos Maiúsculos (I, II, III,...)</li>
         </ul>
+
         <hr />
         <h2 id="links">Links e Âncoragem. Como Funcionam?</h2>
         <small><a href="#inicio">(Voltar)</a></small>
@@ -294,9 +310,171 @@
             <li><strong>Link Interno: </strong>href="contato.html" ➔ Entra em outro cômodo da mesma casa (outra página do seu site).</li>
             <li><strong>Âncora: </strong>href="#topo" ➔ Aponta para um móvel específico dentro do mesmo quarto (um ponto na mesma página).</li>
         </ul>
+
+        <hr />
+        <h2 id="tabelas">Como trabalhar com Tabelas em HTML</h2>
+        <small><a href="#inicio">(Voltar)</a></small>
+        <p>As tabelas no HTML puro servem para organizar informações em linhas e colunas, exatamente como você faria em uma planilha do Excel ou no Google Sheets.</p>
+        <p>Para construir uma tabela, nós usamos um "jogo de blocos" onde uma tag vai dentro da outra. Cada parte da tabela tem uma tag específica.</p>
+        <p><strong>As 4 Tags Principais (O Esqueleto)</strong></p>
+        <ul>
+            <li><strong>&lt;table&gt;:</strong> É a caixa maior que avisa ao navegador: "Aqui começa uma tabela". Tudo fica dentro dela.</li>
+            <li><strong>&lt;tr&gt; (Table Row):</strong> Representa uma linha da tabela. Você cria uma <tr> para cada linha que quiser.</li>
+            <li><strong>&lt;th&gt; (Table Header):</strong> Representa o título da coluna. Fica sempre na primeira linha e deixa o texto em negrito automaticamente.</li>
+            <li><strong>&lt;td&gt; (Table Data):</strong> É a célula comum, onde você coloca o conteúdo real (texto, números, etc.).</li>
+        </ul>
+        <p><strong>Exemplo Prático: Tabela de Preços</strong></p>
+        <p>Imagine que queremos criar uma tabela simples com duas colunas ("Produto" e "Preço") e duas linhas de dados. O código fica assim:</p>
+
+        <pre><code>
+            &lt;table border="1"&gt;
+            &lt;!-- Primeira Linha: Títulos das Colunas --&gt;
+                &lt;tr&gt;
+                &lt;th&gt;Produto&lt;/th&gt;
+                &lt;th&gt;Preço&lt;/th&gt;
+            &lt;/tr&gt;
+    
+            &lt;!-- Segunda Linha: Primeiro Produto --&gt;
+                &lt;tr&gt;
+                &lt;td&gt;Café&lt;/td&gt;
+                &lt;td&gt;R$ 15,00&lt;/td&gt;
+            &lt;/tr&gt;
+    
+            &lt;!-- Terceira Linha: Segundo Produto --&gt;
+                &lt;tr&gt;
+                &lt;td&gt;Açúcar&lt;/td&gt;
+                &lt;td&gt;R$ 5,00&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        </code></pre>
+
+        <p><strong>Nota sobre o border="1": </strong>No HTML puro, as tabelas nascem sem linhas visíveis (transparentes). O atributo border="1" serve apenas para o navegador desenhar uma borda preta simples para podermos enxergar a divisão das células enquanto estudamos.</p>
+        <p><strong>Como ler a estrutura (A Regra de Ouro)</strong></p>
+        <ol>
+            <li>Você abre a tabela (&lt;table&gt;).</li>
+            <li>Você abre a primeira linha (&lt;tr&gt;), coloca os títulos dela (&lt;th&gt;) e fecha a linha (&lt;/tr&gt;).</li>
+            <li>Você abre a segunda linha (&lt;tr&gt;), coloca os dados correspondentes (&lt;td&gt;) e fecha a linha (&lt;/tr&gt;).</li>
+            <li>Repete isso para quantas linhas precisar e depois fecha a tabela (&lt;/table&gt;).</li>
+        </ol>
+        <p><strong>Organização Avançada: &lt;thead&gt;, &lt;tbody&gt; e &lt;tfoot&gt;</strong></p>
+        <p>Quando as tabelas começam a ficar muito grandes, a boa prática do HTML recomenda dividir a tabela em 3 partes lógicas (como o corpo humano):</p>
+        <ul>
+            <li><strong>&lt;thead&gt; (Cabeçalho):</strong> Guarda a linha que tem os títulos (&lt;th&gt;).</li>
+            <li><strong>&lt;tbody&gt; (Corpo):</strong> Guarda as linhas com os dados reais (&lt;td&gt;).</li>
+            <li><strong>&lt;tfoot&gt; (Rodapé):</strong> Guarda a última linha, geralmente usada para totais ou somatórios.</li>
+        </ul>
+        <p><strong>Exemplo de Tabela Avançada:</strong></p>
+
+        <pre><code>
+            &lt;table border="1"&gt;
+    
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Produto&lt;/th&gt;
+                        &lt;th&gt;Preço&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+    
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Café&lt;/td&gt;
+                        &lt;td&gt;R$ 15,00&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Açúcar&lt;/td&gt;
+                        &lt;td&gt;R$ 5,00&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+    
+                &lt;tfoot&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Total&lt;/td&gt;
+                        &lt;td&gt;R$ 20,00&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tfoot&gt;
+
+            &lt;/table&gt;
+        </code></pre>
+
+        <hr />
+        <h2 id="formularios">Trabalhando com Formulários em HTML</h2>
+        <small><a href="#inicio">(Voltar)</a></small>
+        <p>Os formulários são a principal ferramenta de interatividade no HTML puro. Eles permitem que o usuário insira dados (como textos, senhas, e-mails e escolhas) e envie essas informações para um servidor.</p>
+        <p>No HTML puro, o formulário é criado com a tag &lt;form&gt;, e dentro dele usamos tags como &lt;input&gt; (para campos de digitação), &lt;label&gt; (para os textos explicativos dos campos) e &lt;button&gt; (para o botão de envio).</p>
+        <p><strong>O Exemplo Prático de Formulário</strong></p>
+        
+        <pre><code>
+        &lt;form action="salvar_cadastro.html" method="POST"&gt;
+
+            &lt;!-- Campo para o Nome --&gt;
+            &lt;div&gt;
+                &lt;label for="txt-nome"&gt;Nome Completo:&lt;/label&gt;
+                &lt;input type="text" id="txt-nome" name="nome" placeholder="Digite seu nome" required&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Campo para o E-mail --&gt;
+            &lt;div&gt;
+                &lt;label for="txt-email"&gt;E-mail:&lt;/label&gt;
+                &lt;input type="email" id="txt-email" name="email" placeholder="seu@email.com" required&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Botão de Envio --&gt;
+            &lt;button type="submit"&gt;Enviar Cadastro&lt;/button&gt;
+
+        &lt;/form>
+        </code></pre>
+
+        <p><strong>Explicação Didática dos Elementos</strong></p>
+        <ul>
+            <li><strong>&lt;form&gt;:</strong> A caixa que envolve todo o formulário.</li>
+                <ul>
+                    <li><strong>action="...":</strong> Define o endereço da página (ou do server) para onde os dados preenchidos serão enviados.</li>
+                    <li><strong>method="POST":</strong> É a forma segura como o navegador empacota e envia esses dados pela internet.</li>
+                </ul>
+            <li><strong>&lt;label&gt;:</strong> O rótulo/texto explicativo do campo. O atributo for="txt-nome" conecta esse texto diretamente ao campo que tem o id="txt-nome". Se o usuário clicar na palavra "Nome Completo", o cursor pula automaticamente para dentro do campo de digitação!</li>
+            <li><strong>&lt;input&gt;:</strong> A caixinha de digitação em si. Ela não tem tag de fechamento (é uma tag de fechamento automático).</li>
+                <ul>
+                    <li><strong>type="...":</strong> Define o comportamento do campo. type="text" aceita qualquer texto. type="email" força o navegador a validar se o usuário digitou um @ e um ponto.</li>
+                    <li><strong>placeholder="...":</strong> Aquele texto cinza claro que fica dentro do campo antes de você digitar, servindo de dica.</li>
+                    <li><strong>required:</strong> Um atributo mágico do HTML puro. Se o usuário tentar clicar no botão com o campo vazio, o navegador bloqueia o envio e exibe um aviso exigindo o preenchimento.</li>
+                </ul>
+            <li><strong>&lt;button type="submit"&gt;:</strong> O botão que, ao ser clicado, dispara o envio de tudo o que foi preenchido dentro do formulário.</li>
+        </ul>
+
         <hr />
         <h2 id="referencia">REFERÊNCIAS - Links Interessantes</h2>
         <small><a href="#inicio">(Voltar)</a></small>
+        <p>Para criar os links de referências abaixo, foi utilizada a tag de ancoragem <code>&lt;a href="..."&gt;</code>.</p>
+
+<ul>
+    <li>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web Docs - Documentação Oficial do HTML</a>
+        <!-- A maior e mais respeitada enciclopédia sobre desenvolvimento web mantida pela Mozilla. -->
+    </li>
+    <li>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Structuring_content" target="_blank">MDN - Introdução ao HTML Semântico</a>
+        <!-- Guia focado em estruturar o conteúdo do site em seções lógicas e acessíveis. -->
+    </li>
+    <li>
+        <a href="https://www.freecodecamp.org/portuguese/news/manual-de-html-aprendizagem-de-html-para-iniciantes/" target="_blank">Manual de HTML para Iniciantes - freeCodeCamp</a>
+        <!-- Um guia passo a passo em formato de artigo longo cobrindo desde textos até tabelas. -->
+    </li>
+    <li>
+        <a href="https://w3schools.com/htmlcss/" target="_blank">W3Schools - Tutorial Interativo de HTML e CSS</a>
+        <!-- Embora o site original use termos universais, a plataforma oferece opção de tradução nativa e testes de código direto no navegador. -->
+    </li>
+    <li>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/HTML" target="_blank">Glossário Web: O que é HTML?</a>
+        <!-- Uma explicação direta e resumida sobre a anatomia de tags e atributos para consultas rápidas. -->
+    </li>
+    <li>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Structuring_content/Structuring_documents" target="_blank">MDN - Estrutura de Documentos e Sites</a>
+        <!-- Tutorial focado em como construir layouts funcionais usando apenas o HTML puro. -->
+    </li>
+</ul>
+
+
+
 
     </body>
 </HTML>
